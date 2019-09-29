@@ -1,7 +1,7 @@
 from re import search
 
 
-def is_valid(isbn):
+def is_valid(isbn: str) -> bool:
     match = search(r'^(\d{9})(\d|X)$', isbn.replace('-', ''))
     if not match:
         return False

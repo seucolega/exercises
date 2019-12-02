@@ -1,9 +1,11 @@
+DIVIDER_AND_TEXT = (
+    (3, 'Fizz'),
+    (5, 'Buzz')
+)
+
+
 def fizz_buzz(number: int) -> str:
-    divider_and_text = (
-        (3, 'Fizz'),
-        (5, 'Buzz')
-    )
-    return ''.join([item[1] for item in divider_and_text if number % item[0] == 0]) or str(number)
+    return ''.join([item[1] for item in DIVIDER_AND_TEXT if number % item[0] == 0]) or str(number)
 
 
 if __name__ == '__main__':

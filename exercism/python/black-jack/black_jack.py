@@ -44,7 +44,8 @@ def higher_card(card_one: str, card_two: str) -> Union[str, Tuple[str, str]]:
 
     if card_one_value > card_two_value:
         return card_one
-    elif card_two_value > card_one_value:
+
+    if card_two_value > card_one_value:
         return card_two
 
     return card_one, card_two
@@ -69,8 +70,8 @@ def value_of_ace(card_one: str, card_two: str) -> int:
 
     if cards_value_sum + 11 <= 21:
         return 11
-    else:
-        return 1
+
+    return 1
 
 
 def is_blackjack(card_one: str, card_two: str) -> bool:
